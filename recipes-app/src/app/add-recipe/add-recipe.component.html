@@ -1,0 +1,27 @@
+<form>
+    <div class="form-group">
+        <label>Yemek Adı</label>
+        <input type="text" class="form-control" placeholder="Yemek adı" [(ngModel)]="recipeName">
+    </div><div class="form-group">
+        <label>Yemek Fotoğraf URL</label>
+        <input type="text" class="form-control" placeholder="Yemek Fotoğraf URL" [(ngModel)]="recipeImage">
+    </div>
+    <div class="form-group">
+      <label>Kategori</label>
+      <select class="form-control"[(ngModel)]="recipeCategory">
+        <option>Seçiniz</option>
+        <option>Kahvaltı</option>
+        <option>Ana yemek</option>
+        <option>Tatlı</option>
+      </select>
+    </div>
+    <div class="form-group">
+        <label>Malzemeler</label>
+        <textarea class="form-control" rows="3" placeholder="Her satırda bir malzeme" [(ngModel)]="recipeIngredients"></textarea>
+    </div>
+    <div class="form-group">
+      <label>Hazırlanış</label>
+      <textarea class="form-control" rows="3" [(ngModel)]="recipeInstructions"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="addRecipe()">Tarifi ekle</button>
+  </form>
