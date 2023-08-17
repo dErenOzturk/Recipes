@@ -1,0 +1,16 @@
+<div class="container recipe-list">
+  {{ showCategoryRecipes() }}
+  <div class="card custom-card">
+    <img [src]="recipe[index].imgURL" class="card-img-top custom-img" />
+    <div class="card-body">
+      <h5 class="card-title custom-title">{{ recipe[index].title }}</h5>
+      <p class="card-text custom-text">Kişi Sayısı: {{ recipe[index].serving }} kişilik</p>
+      <h3 class="custom-subtitle">Malzemeler:</h3>
+      <ul class="custom-list">
+        <li *ngFor="let malzeme of recipe[index].ingredients">{{ malzeme }}</li>
+      </ul>
+      <h3 class="custom-subtitle">Hazırlanış:</h3>
+      <p class="recipe-instructions custom-instructions">{{ formatInstructions(recipe[index].instructions) }}</p>
+    </div>
+  </div>
+</div>

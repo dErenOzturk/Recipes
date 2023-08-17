@@ -1,0 +1,17 @@
+<div class="recipe-list">
+  <div
+    *ngFor="let recipe of breakfastRecipes; let i = index"
+    routerLink="/recipe-content"
+    class="card custom-button"
+    (click)="recipeDetails(i)"
+  >
+    <button class="btn btn-danger delete-button" (click)="deleteRecipe(recipe)">
+      Sil
+    </button>
+    <img [src]="recipe.imgURL" class="card-img-top" />
+    <div class="card-body">
+      <h5 class="card-title">{{ recipe.title }}</h5>
+      <p class="card-text">Kişi Sayısı: {{ recipe.serving }} kişilik</p>
+    </div>
+  </div>
+</div>

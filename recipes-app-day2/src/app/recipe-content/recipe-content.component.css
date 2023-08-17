@@ -1,0 +1,46 @@
+/* Kart boyutu ve alan düzenlemeleri */
+.custom-card {
+  width: 1000px; /* İstediğiniz genişliği ayarlayabilirsiniz */
+  height: auto; /* Kartın yüksekliği otomatik ayarlanacaktır */
+  border: 1px solid #ccc;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 0 auto; /* Kartı ortalamak için */
+  padding: 20px; /* İçerik ve kenar boşluğu */
+}
+
+/* Kart üzerindeki resim boyutu ve stil */
+.custom-img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Kart başlığı */
+.custom-title {
+  font-size: 24px; /* İstediğiniz boyuta ayarlayabilirsiniz */
+  margin-bottom: 10px;
+}
+
+/* Kart metinleri */
+.custom-text {
+  font-size: 18px; /* İstediğiniz boyuta ayarlayabilirsiniz */
+  color: #777;
+  margin-bottom: 10px;
+}
+
+/* Alt başlık */
+.custom-subtitle {
+  font-size: 20px; /* İstediğiniz boyuta ayarlayabilirsiniz */
+  margin: 15px 0;
+}
+
+/* Liste stilleri */
+.custom-list {
+  font-size: 18px; /* İstediğiniz boyuta ayarlayabilirsiniz */
+  margin-left: 20px; /* Liste içeriğini içeri kaydırmak için */
+}
+
+/* Hazırlanış metni */
+.custom-instructions {
+  font-size: 18px; /* İstediğiniz boyuta ayarlayabilirsiniz */
+  white-space: pre-line; /* Boşlukları ve yeni satırları koru */
+}

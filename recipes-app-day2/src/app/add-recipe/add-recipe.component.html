@@ -1,0 +1,30 @@
+<div class="container">
+  <h2>Tarif Ekle</h2>
+  <form>
+    <div class="form-group">
+      <label for="recipeName">Yemek Adı:</label>
+      <input type="text" class="form-control" id="recipeName">
+    </div>
+    <div class="form-group">
+      <label for="photoUrl">Fotoğraf URL'si:</label>
+      <input type="url" class="form-control" id="photoUrl">
+    </div>
+    <div class="form-group">
+      <label for="category">Kategori:</label>
+      <select class="form-control" id="category">
+        <option value="breakfast">Kahvaltı</option>
+        <option value="main-course">Ana Yemek</option>
+        <option value="dessert">Tatlı</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="ingredients">Malzemeler:</label>
+      <textarea class="form-control" id="ingredients" rows="4"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="instructions">Hazırlanış:</label>
+      <textarea class="form-control" id="instructions" rows="6"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Ekle</button>
+  </form>
+</div>
