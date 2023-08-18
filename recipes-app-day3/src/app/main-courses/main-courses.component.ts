@@ -1,0 +1,25 @@
+import { Component } from '@angular/core';
+import { RecipeService } from '../recipe.service';
+
+@Component({
+  selector: 'app-main-courses',
+  templateUrl: './main-courses.component.html',
+  styleUrls: ['./main-courses.component.css'],
+})
+export class MainCoursesComponent {
+  constructor(private recipeService: RecipeService) {}
+
+  mainCourseRecipes = this.recipeService.getMainCourseRecipes();
+
+  recipeDetails(i: number) {
+    this.recipeService.contentIndex = i;
+    this.recipeService.recipeCategory = 'main-course';
+  }
+
+  deleteRecipe(recipe: any) {
+    const index = this.mainCourseRecipes.indexOf(recipe);
+    if (index !== -1) {
+      this.mainCourseRecipes.splice(index, 1);
+    }
+  }
+}

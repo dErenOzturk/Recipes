@@ -1,0 +1,43 @@
+<div class="container">
+  <h2 class="custom-title">Tarif Ekle</h2>
+  <form class="custom-form" #frm="ngForm" (ngSubmit)="addRecipe(frm.value, frm)">
+
+    <div class="form-group">
+      <label>Yemek Adı:</label>
+      <input type="text" class="form-control" name="title" ngModel>
+    </div>
+
+    <div class="form-group">
+      <label>Fotoğraf URL'si:</label>
+      <input type="url" class="form-control" name="imgURL" ngModel>
+    </div>
+
+    <div class="form-group">
+      <label>Kategori:</label>
+      <select class="form-control" name="category" ngModel>
+        <option value="breakfast">Kahvaltı</option>
+        <option value="main-course">Ana Yemek</option>
+        <option value="dessert">Tatlı</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Kişi sayısı:</label>
+      <input type="text" class="form-control" name="serving" ngModel>
+    </div>
+
+    <div class="form-group">
+      <label>Malzemeler:</label>
+      <textarea placeholder="Her satırda 1 malzeme girin." class="form-control" rows="4" name="ingredients" ngModel></textarea>
+    </div>
+
+    <div class="form-group">
+      <label>Hazırlanış:</label>
+      <textarea class="form-control" rows="6" name="instructions" ngModel></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary custom-button">Ekle</button>
+
+  </form>
+</div>
+
