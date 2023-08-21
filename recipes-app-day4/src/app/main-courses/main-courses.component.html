@@ -1,0 +1,23 @@
+<div class="recipe-list">
+  <div *ngFor="let recipe of mainCourseRecipes; let i = index" class="card custom-card">
+    
+    <button class="btn btn-danger delete-button" (click)="deleteRecipe(recipe)">Sil</button>
+
+    <span class="custom-fav" (click)="setFavorite(recipe)">
+      <i *ngIf="!recipe.isFavorite" class="fa-regular fa-heart" style="color: #ff0000;"></i>
+      <i *ngIf="recipe.isFavorite" class="fa-solid fa-heart" style="color: #ff0000;"></i>
+    </span> 
+    
+    <img [src]="recipe.imgURL" class="card-img-top" />
+    
+    <div class="card-body">
+      <h5 class="card-title">{{ recipe.title }}</h5>
+      <p class="card-text">Kişi Sayısı: {{ recipe.serving }} kişilik</p>
+    </div>
+
+    <button routerLink="/recipe-content" class="btn btn-primary view-details-button" (click)="recipeDetails(i)">
+      Tarif Detayları
+    </button>
+
+  </div>
+</div>
