@@ -1,0 +1,19 @@
+.empty-state {
+  padding: 30px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.empty-state h3 {
+  color: #343a40;
+  margin-bottom: 10px;
+}
+
+.empty-state p {
+  color: #6c757d;
+}
+
+.empty-state button {
+  margin-top: 5px;
+}

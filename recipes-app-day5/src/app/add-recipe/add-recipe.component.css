@@ -1,0 +1,23 @@
+/* add-recipe.component.css */
+
+.custom-title {
+  text-align: center; 
+  margin-top: 20px;
+}
+
+.custom-form {
+  padding: 20px;
+}
+
+.form-group label {
+  font-weight: bold;
+}
+
+.form-control {
+  margin-bottom: 10px;
+}
+
+.custom-button {
+  display: block;
+  width: 100%;
+}

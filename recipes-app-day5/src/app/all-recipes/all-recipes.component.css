@@ -1,0 +1,24 @@
+/* Uyarı penceresi arkaplanı ve konumu */
+.custom-warning {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 50%; /* Dikeyde ortalama konumunu belirliyoruz */
+  left: 50%; /* Yatayda ortalama konumunu belirliyoruz */
+  transform: translate(-50%, -50%); /* Elementin merkeze kaydırılması */
+  z-index: 9999;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); /* Siyah renk, yarı saydam (alpha değeri 0.5) */
+    z-index: 9998; /* Uyarı ekranının altında kalması için */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

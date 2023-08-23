@@ -1,0 +1,36 @@
+<div class="message-overlay" *ngIf="successMessage">
+  <div class="message">{{ successMessage }}</div>
+</div>
+
+<h1 style="text-align: center; margin-top: 15px;">Tarif Defterim</h1>
+<div class="page-container">
+  <div class="recipe-list">
+    <div *ngFor="let recipe of favoriteRecipes; let i = index" class="card custom-card">
+      <span class="custom-fav" (click)="setFavorite(recipe)">
+        <i *ngIf="recipe.isFavorite" class="fa-solid fa-heart" style="color: #ff0000"></i>
+      </span>
+
+      <img [src]="recipe.imgURL" class="card-img-top" />
+      <div class="card-body">
+        <h5 class="card-title">{{ recipe.title }}</h5>
+        <p class="card-text">Kişi Sayısı: {{ recipe.serving }} kişilik</p>
+      </div>
+      <button routerLink="/recipe-content" class="btn btn-primary view-details-button" (click)="recipeDetails(i)">
+        Tarif Detayları
+      </button>
+    </div>
+  </div>
+</div>
+<div class="container empty text-center" style="margin-top: 80px;">
+  <ng-container *ngIf="favoriteRecipes.length === 0">
+    <div class="empty-state">
+      <h3>Defterinize hiç tarif eklemediniz!</h3>
+      <p>
+        <i class="fa-regular fa-face-smile fa-bounce" style="color: #f21818;"></i>
+        Tariflere göz atmak için tıklayın
+        <i class="fa-regular fa-face-smile fa-bounce" style="color: #f21818;"></i>
+      </p>
+      <button class="btn btn-primary" (click)="redirectToAllRecipes()">Tariflere Göz At</button>
+    </div>
+  </ng-container>
+</div>

@@ -1,0 +1,30 @@
+<div class="message-overlay" *ngIf="successMessage">
+  <div class="message">{{ successMessage }}</div>
+</div>
+
+<h1 style="text-align: center; margin-top: 15px;">Tatlı Tarifleri</h1>
+<div class="page-container">
+  <div class="recipe-list">
+    <div *ngFor="let recipe of dessertRecipes; let i = index" class="card custom-card">
+      
+      <button class="btn btn-danger delete-button" (click)="openWarning(i)"><i class="fa-solid fa-x fa-xl"></i></button>
+
+      <span class="custom-fav" (click)="setFavorite(recipe)">
+        <i *ngIf="!recipe.isFavorite" class="spin-animation fa-regular fa-heart" style="color: #ff0000;"></i>
+        <i *ngIf="recipe.isFavorite" class="fa-solid fa-heart" style="color: #ff0000;"></i>
+      </span> 
+      
+      <img [src]="recipe.imgURL" class="card-img-top" />
+      
+      <div class="card-body">
+        <h5 class="card-title">{{ recipe.title }}</h5>
+        <p class="card-text">Kişi Sayısı: {{ recipe.serving }} kişilik</p>
+      </div>
+
+      <button routerLink="/recipe-content" class="btn btn-primary view-details-button" (click)="recipeDetails(i)">
+        Tarif Detayları
+      </button>
+
+    </div>
+  </div>
+</div>
